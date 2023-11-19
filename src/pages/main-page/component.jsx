@@ -1,11 +1,15 @@
-import { NavBar } from "../../components/NavBar/component";
-import { Restaurants } from "../../components/Restaurants/component";
+import { Navbar } from "../../components/navbar/component";
+// import { Restaurants } from "../../components/Restaurants/component";
 
 export const Page = ({ restaurants }) => {
+  const items = Array.from(
+    new Set(restaurants.map(({ name, id }) => ({ name, id })))
+  );
+
   return (
     <div>
-      <NavBar items={restaurants} />
-      <Restaurants restaurants={restaurants} />
+      <Navbar items={items} />
+      {/* <Restaurants restaurants={restaurants} /> */}
     </div>
   );
 };
