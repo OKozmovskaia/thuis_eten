@@ -27,15 +27,11 @@ root.render(
         <h3>Review</h3>
         <ul>
           <li id={restaurants[0].reviews[0].id}>
-            {restaurants[0].reviews[0].user}
-            {": "}
-            {restaurants[0].reviews[0].rating}
+            {restaurants[0].reviews[0].user}: {restaurants[0].reviews[0].rating}
             <p>{restaurants[0].reviews[0].text}</p>
           </li>
           <li id={restaurants[0].reviews[1].id}>
-            {restaurants[0].reviews[1].user}
-            {": "}
-            {restaurants[0].reviews[1].rating}
+            {restaurants[0].reviews[1].user}: {restaurants[0].reviews[1].rating}
             <p>{restaurants[0].reviews[1].text}</p>
           </li>
         </ul>
@@ -58,21 +54,15 @@ root.render(
         <h3>Review</h3>
         <ul>
           <li id={restaurants[1].reviews[0].id}>
-            {restaurants[1].reviews[0].user}
-            {": "}
-            {restaurants[1].reviews[0].rating}
+            {restaurants[1].reviews[0].user}: {restaurants[1].reviews[0].rating}
             <p>{restaurants[1].reviews[0].text}</p>
           </li>
           <li id={restaurants[1].reviews[1].id}>
-            {restaurants[1].reviews[1].user}
-            {": "}
-            {restaurants[1].reviews[1].rating}
+            {restaurants[1].reviews[1].user}: {restaurants[1].reviews[1].rating}
             <p>{restaurants[1].reviews[1].text}</p>
           </li>
           <li id={restaurants[1].reviews[2].id}>
-            {restaurants[1].reviews[2].user}
-            {": "}
-            {restaurants[1].reviews[2].rating}
+            {restaurants[1].reviews[2].user}: {restaurants[1].reviews[2].rating}
             <p>{restaurants[1].reviews[2].text}</p>
           </li>
         </ul>
@@ -98,9 +88,7 @@ root.render(
         <h3>Review</h3>
         <ul>
           <li id={restaurants[2].reviews[0].id}>
-            {restaurants[2].reviews[0].user}
-            {": "}
-            {restaurants[2].reviews[0].rating}
+            {restaurants[2].reviews[0].user}: {restaurants[2].reviews[0].rating}
             <p>{restaurants[2].reviews[0].text}</p>
           </li>
         </ul>
@@ -123,15 +111,11 @@ root.render(
         <h3>Review</h3>
         <ul>
           <li id={restaurants[3].reviews[0].id}>
-            {restaurants[3].reviews[0].user}
-            {": "}
-            {restaurants[3].reviews[0].rating}
+            {restaurants[3].reviews[0].user}: {restaurants[3].reviews[0].rating}
             <p>{restaurants[3].reviews[0].text}</p>
           </li>
           <li id={restaurants[3].reviews[1].id}>
-            {restaurants[3].reviews[1].user}
-            {": "}
-            {restaurants[3].reviews[1].rating}
+            {restaurants[3].reviews[1].user}: {restaurants[3].reviews[1].rating}
             <p>{restaurants[3].reviews[1].text}</p>
           </li>
         </ul>
