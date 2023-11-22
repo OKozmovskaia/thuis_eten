@@ -1,14 +1,13 @@
+import { Dish } from "../dish/component";
+
 export const Menu = ({ menu }) => {
   return (
     <div>
       <h3>Menu:</h3>
       <ol>
-        {menu.map(({ id, name, price, ingredients }) => (
-          <li key={id}>
-            <p>
-              <strong>{name}</strong> - {price}$
-            </p>
-            <p>{ingredients}</p>
+        {menu.map((dish) => (
+          <li key={dish.id}>
+            <Dish dish={dish} />
           </li>
         ))}
       </ol>
