@@ -4,5 +4,4 @@ import { Page } from "./pages/main-page/component";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// console.log(root);
-root.render(<Page restaurants={restaurants} />);
+
