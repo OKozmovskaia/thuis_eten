@@ -1,4 +1,4 @@
-import { Navbar } from "../../components/navbar/component";
+import { RestaurantsTabs } from "../../components/restaurants-tabs/component";
 import { Restaurants } from "../../components/restaurants/component";
 
 export const Page = ({ restaurants }) => {
@@ -9,7 +9,7 @@ export const Page = ({ restaurants }) => {
   return (
     <div>
       <h1>Our restaurants:</h1>
-      <Navbar items={items} />
+      <RestaurantsTabs items={items} />
       <Restaurants restaurants={restaurants} />
     </div>
   );
