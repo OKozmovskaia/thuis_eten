@@ -21,7 +21,7 @@ export const Page = ({ restaurants }) => {
     <div>
       <h1>Our restaurants:</h1>
       <RestaurantsTabs items={items} onSelectTab={setActiveRestaurantID} />
-      {activeRestaurantID && <Restaurant restaurant={selectedRestaurant} />}
+      {selectedRestaurant && <Restaurant restaurant={selectedRestaurant} />}
     </div>
   );
 };
