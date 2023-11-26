@@ -7,21 +7,21 @@ export const Page = ({ restaurants }) => {
     new Set(restaurants.map(({ name, id }) => ({ name, id })))
   );
 
-  const [selectedTab, onSelectedTab] = useState(null);
+  const [activeRestaurantID, setActiveRestaurantID] = useState(null);
 
   const selectedRestaurant = restaurants.find(
-    ({ name }) => name === selectedTab || null
+    ({ id }) => id === activeRestaurantID || null
   );
 
   if (!restaurants.length) {
-    return 0;
+    return null;
   }
 
   return (
     <div>
       <h1>Our restaurants:</h1>
-      <RestaurantsTabs items={items} onSelectTab={onSelectedTab} />
-      {selectedTab && <Restaurant restaurant={selectedRestaurant} />}
+      <RestaurantsTabs items={items} onSelectTab={setActiveRestaurantID} />
+      {activeRestaurantID && <Restaurant restaurant={selectedRestaurant} />}
     </div>
   );
 };
