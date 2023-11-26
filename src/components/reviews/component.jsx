@@ -1,4 +1,5 @@
 import { Review } from "../review/component";
+import { ReviewForm } from "../review-form/component";
 
 export const Reviews = ({ reviews }) => {
   return (
@@ -11,6 +12,8 @@ export const Reviews = ({ reviews }) => {
           </li>
         ))}
       </ul>
+      <h4>Add your review: </h4>
+      <ReviewForm />
     </div>
   );
 };
