@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { Counter } from "../counter/component";
 
 const DEFAULT_FORM_VALUE = {
   name: "",
@@ -56,13 +57,17 @@ export const ReviewForm = () => {
       </div>
       <div>
         <label htmlFor="raiting">Raiting:</label>
-        <input
-          type="number"
+        <Counter
           id="raiting"
           value={formValue.raiting}
-          onChange={(event) =>
-            dispatch({ type: "setRaiting", payload: event.target.value })
+          increment={() =>
+            dispatch({ type: "setRaiting", payload: formValue.raiting + 0.5 })
           }
+          decrement={() =>
+            dispatch({ type: "setRaiting", payload: formValue.raiting - 0.5 })
+          }
+          min={1}
+          max={5}
         />
       </div>
     </div>
