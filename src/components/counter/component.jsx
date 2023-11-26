@@ -1,23 +1,17 @@
 import { useState } from "react";
 
-export const Counter = () => {
-  const [quantity, setQuantity] = useState(0);
-
-  const minusOne = () => {
-    if (quantity === 0) return;
-    setQuantity(quantity - 1);
-  };
-
-  const plusOne = () => {
-    if (quantity === 5) return;
-    setQuantity(quantity + 1);
-  };
-
+export const Counter = ({ value, increment, decrement }) => {
   return (
     <div>
-      <button onClick={minusOne}> - </button>
-      <span> {quantity} </span>
-      <button onClick={plusOne}> + </button>
+      <button onClick={decrement} disabled={value <= 0}>
+        {" "}
+        -{" "}
+      </button>
+      <span> {value} </span>
+      <button onClick={increment} disabled={value >= 5}>
+        {" "}
+        +{" "}
+      </button>
     </div>
   );
 };
