@@ -1,3 +1,3 @@
-export const Tab = ({ children }) => {
-  return <button>{children}</button>;
+export const Tab = ({ children, onClick }) => {
+  return <button onClick={onClick}>{children}</button>;
 };
