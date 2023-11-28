@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Mandatory";
+  src: url("./mandatory.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mandatory", sans-serif;
+  --background-primary: #f0f0ee;
+  --background-secondary: #eeefdf;
+  --yellow: #f5cf6f;
+  --orange: #f4a133;
+  --black: #2e1f22;
+  --white: #fefffe;
+}
