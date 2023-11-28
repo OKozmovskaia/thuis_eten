@@ -19,6 +19,8 @@ export const Dish = ({ dish }) => {
         value={value}
         increment={() => setValue(value + 1)}
         decrement={() => setValue(value - 1)}
+        min={0}
+        max={5}
       />
     </div>
   );
