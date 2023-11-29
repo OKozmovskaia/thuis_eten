@@ -1,0 +1,15 @@
+.root {
+  border: solid 5px var(--yellow);
+  border-radius: 10px;
+  padding: 1em;
+  max-width: 500px;
+  margin: 1em 2em;
+}
+
+.root ul {
+  list-style-type: none;
+}
+
+.title {
+  font-size: 1.5em;
+}
