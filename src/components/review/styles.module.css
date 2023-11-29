@@ -1,0 +1,17 @@
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 1em auto;
+}
+
+.reviewTitle {
+  font-size: 1.2em;
+  background-color: var(--yellow);
+  align-self: flex-start;
+  padding: 0 5px;
+}
+
+.reviewText {
+  font-size: 1.1em;
+}
