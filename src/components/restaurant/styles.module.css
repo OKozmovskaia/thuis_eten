@@ -1,8 +1,14 @@
-.container {
-  margin: 2em 0;
-}
-
 .container h2 {
   font-size: 3em;
   padding: 0 0.5em;
+}
+
+.menu {
+  max-width: 500px;
+  margin: 1em 2em;
+}
+
+.reviews {
+  max-width: 500px;
+  margin: 1em 2em;
 }
