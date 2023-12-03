@@ -21,3 +21,9 @@
 html {
   background-color: var(--background-primary);
 }
+
+html,
+body,
+#root {
+  height: 100vh;
+}
