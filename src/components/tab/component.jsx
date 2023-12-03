@@ -1,8 +1,9 @@
 import styles from "./styles.module.css";
+import classNames from "classnames";
 
-export const Tab = ({ children, onClick }) => {
+export const Tab = ({ children, onClick, className }) => {
   return (
-    <button className={styles.button} onClick={onClick}>
+    <button className={classNames(className, styles.button)} onClick={onClick}>
       {children}
     </button>
   );

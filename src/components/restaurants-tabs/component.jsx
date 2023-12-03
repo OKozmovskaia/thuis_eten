@@ -5,7 +5,7 @@ export const RestaurantsTabs = ({ items, onSelectTab }) => {
   return (
     <div className={styles.container}>
       {items.map(({ name, id }) => (
-        <Tab key={id} onClick={() => onSelectTab(id)}>
+        <Tab className={styles.tab} key={id} onClick={() => onSelectTab(id)}>
           {name}
         </Tab>
       ))}
