@@ -25,10 +25,7 @@ export const Page = () => {
         onSelectTab={setActiveRestaurantID}
       />
       {selectedRestaurant && (
-        <Restaurant
-          restaurant={selectedRestaurant}
-          className={styles.restaurant}
-        />
+        <Restaurant id={selectedRestaurant} className={styles.restaurant} />
       )}
     </Layout>
   );

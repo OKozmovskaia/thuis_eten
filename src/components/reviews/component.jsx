@@ -3,14 +3,14 @@ import { ReviewForm } from "../review-form/component";
 import styles from "./styles.module.css";
 import classNames from "classnames";
 
-export const Reviews = ({ reviews, className }) => {
+export const Reviews = ({ ids, className }) => {
   return (
     <div className={classNames(className, styles.container)}>
       <h3 className={styles.title}>Reviews:</h3>
       <ul>
-        {reviews.map((review) => (
-          <li key={review.id}>
-            <Review review={review} className={styles.review} />
+        {ids.map((id) => (
+          <li key={id}>
+            <Review id={id} className={styles.review} />
           </li>
         ))}
       </ul>

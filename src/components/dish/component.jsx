@@ -1,12 +1,16 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Counter } from "../counter/component";
 import styles from "./styles.module.css";
+import { selectDishById } from "../../redux/entities/dish/selectors";
 
-export const Dish = ({ dish }) => {
-  const { name, price, ingredients } = dish;
+export const Dish = ({ id }) => {
+  const { name, price, ingredients } = useSelector((state) =>
+    selectDishById(state, id)
+  );
   const [value, setValue] = useState(0);
 
-  if (!dish) {
+  if (!name) {
     return null;
   }
 
