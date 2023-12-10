@@ -1,27 +1,29 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectRestaurantIds } from "../../redux/entities/restaurant/selectors";
 import { RestaurantsTabs } from "../../components/restaurants-tabs/component";
 import { Restaurant } from "../../components/restaurant/component";
 import { Layout } from "../../components/layout/component";
 import styles from "./styles.module.css";
 
-export const Page = ({ restaurants }) => {
-  const items = Array.from(
-    new Set(restaurants.map(({ name, id }) => ({ name, id })))
-  );
-
+export const Page = () => {
   const [activeRestaurantID, setActiveRestaurantID] = useState(null);
+  const restaurantsIds = useSelector(selectRestaurantIds);
 
-  const selectedRestaurant = restaurants.find(
-    ({ id }) => id === activeRestaurantID || null
+  const selectedRestaurant = restaurantsIds.find(
+    (id) => id === activeRestaurantID || null
   );
 
-  if (!restaurants.length) {
+  if (!restaurantsIds.length) {
     return null;
   }
 
   return (
     <Layout>
-      <RestaurantsTabs items={items} onSelectTab={setActiveRestaurantID} />
+      <RestaurantsTabs
+        ids={restaurantsIds}
+        onSelectTab={setActiveRestaurantID}
+      />
       {selectedRestaurant && (
         <Restaurant
           restaurant={selectedRestaurant}
