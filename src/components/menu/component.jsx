@@ -1,16 +1,18 @@
+import classNames from "classnames";
 import { Dish } from "../dish/component";
+import styles from "./styles.module.css";
 
-export const Menu = ({ menu }) => {
+export const Menu = ({ menu, className }) => {
   return (
-    <div>
+    <div className={classNames(className, styles.container)}>
       <h3>Menu:</h3>
-      <ol>
+      <ul className={styles.list}>
         {menu.map((dish) => (
           <li key={dish.id}>
             <Dish dish={dish} />
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 };

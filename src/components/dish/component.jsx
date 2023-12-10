@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Counter } from "../counter/component";
+import styles from "./styles.module.css";
 
 export const Dish = ({ dish }) => {
   const { name, price, ingredients } = dish;
@@ -10,11 +11,13 @@ export const Dish = ({ dish }) => {
   }
 
   return (
-    <div>
-      <p>
-        <strong>{name}</strong> - {price}$<br />
-        {ingredients}
-      </p>
+    <div className={styles.container}>
+      <div className={styles.description}>
+        <h6>
+          {name} - {price}$
+        </h6>
+        <p>{ingredients}</p>
+      </div>
       <Counter
         value={value}
         increment={() => setValue(value + 1)}

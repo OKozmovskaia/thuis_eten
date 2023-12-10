@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.description h6 {
+  font-size: 1.3em;
+}
+
+.description p {
+  font-size: 1.1em;
+}

@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.main {
+  margin: 2em auto;
+}
+
+.footer {
+  margin: 0 auto;
+}
